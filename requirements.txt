@@ -1,0 +1,4 @@
+discord.py @ git+https://github.com/Rapptz/discord.py.git
+aiohttp>=3.10,<4
+tweepy[async]
+jishaku
