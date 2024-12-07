@@ -96,6 +96,7 @@ class Twitter(commands.Cog):
 
         config = core.CONFIG
         config["TWITTER"]["last_id"] = last_id
+        self.last_id = last_id
 
         includes = data["includes"]
         media = includes.get("media", [])
