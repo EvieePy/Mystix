@@ -88,8 +88,12 @@ class Twitter(commands.Cog):
             expansions=["author_id", "attachments.media_keys"],
         )
 
-        meta: dict[str, Any] = data["meta"]
-        last_id: int = int(meta["newest_id"])
+        try:
+            meta: dict[str, Any] = data["meta"]
+            last_id: int = int(meta["newest_id"])
+        except KeyError:
+            return
+
         config = core.CONFIG
         config["TWITTER"]["last_id"] = last_id
 
