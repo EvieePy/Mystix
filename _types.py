@@ -23,8 +23,6 @@ class DiscordT(TypedDict):
 class TwitterT(TypedDict):
     TOKEN: str
     last_id: int
-    key: str
-    secret: str
 
 
 class ConfigT(TypedDict):
